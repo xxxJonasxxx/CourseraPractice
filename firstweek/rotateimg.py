@@ -11,7 +11,10 @@ from PIL import Image
 
 def main():	
 
+	#Iterate between images files
 	for file_name in os.listdir("Images/"):
+
+		#Open the images, rotate, resizes and save in a folder
 		try:
 			img = Image.open("Images/" + file_name)
 			img.rotate(-90).resize((128,128)).convert('RGB').save('Icons/' + file_name + '.jpeg')
